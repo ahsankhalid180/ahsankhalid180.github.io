@@ -90,7 +90,7 @@ async function mainEvent() {
      */
   /////////const results = await fetch('/api/foodServicePG');
   /////////const arrayFromJson = await results.json(); // here is where we get the data from our request as JSON
-  const results = 'https://data.princegeorgescountymd.gov/';
+  const results = await fetch ('https://data.princegeorgescountymd.gov/');
   const arrayFromJson = await results.json(); 
   /*
       Below this comment, we log out a table of all the results using "dot notation"
