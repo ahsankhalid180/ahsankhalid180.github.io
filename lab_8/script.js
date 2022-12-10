@@ -115,7 +115,8 @@ function getRandomIntInclusive(min, max) {
         This next line goes to the request for 'GET' in the file at /server/routes/foodServiceRoutes.js
         It's at about line 27 - go have a look and see what we're retrieving and sending back.
        */
-    const results = await fetch('/api/foodServicePG');
+    //const results = await fetch('/api/foodServicePG');
+    const results = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json?category=Restaurant');  
     const arrayFromJson = await results.json(); // here is where we get the data from our request as JSON
   
     /*
@@ -129,10 +130,10 @@ function getRandomIntInclusive(min, max) {
   
     // in your browser console, try expanding this object to see what fields are available to work with
     // for example: arrayFromJson.data[0].name, etc
-    console.log(arrayFromJson.data[0]);
+    console.log(arrayFromJson[0]);
   
     // this is called "string interpolation" and is how we build large text blocks with variables
-    console.log(`${arrayFromJson.data[0].name} ${arrayFromJson.data[0].category}`);
+    console.log(`${arrayFromJson[0].name} ${arrayFromJson[0].category}`);
   
     // This IF statement ensures we can't do anything if we don't have information yet
     if (arrayFromJson.data?.length > 0) { // the question mark in this means "if this is set at all"

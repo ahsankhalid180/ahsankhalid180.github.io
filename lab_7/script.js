@@ -88,12 +88,8 @@ async function mainEvent() {
       This next line goes to the request for 'GET' in the file at /server/routes/foodServiceRoutes.js
       It's at about line 27 - go have a look and see what we're retrieving and sending back.
      */
-  /////////const results = await fetch('/api/foodServicePG');
-  /////////const arrayFromJson = await results.json(); // here is where we get the data from our request as JSON
 
   const results = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json?category=Restaurant');  
-  // const results = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json?establishment_id=900');
-
   const arrayFromJson = await results.json(); 
   /*
       Below this comment, we log out a table of all the results using "dot notation"
@@ -119,10 +115,8 @@ async function mainEvent() {
     loadAnimation.classList.add('lds-ellipsis_hidden');
 
     let currentList = [];
-    console.log('D - it is!');
 
     form.addEventListener('input', (event) => {
-      console.log('C - it is!');
       console.log(event.target.value);
       const filteredList = filterList(currentList, event.target.value);
       injectHTML(filteredList);
@@ -133,12 +127,10 @@ async function mainEvent() {
     form.addEventListener('submit', (submitEvent) => {
       // This is needed to stop our page from changing to a new URL even though it heard a GET request
       
-      console.log('A - it is!');
       submitEvent.preventDefault();
 
       // This constant will have the value of your 15-restaurant collection when it processes
       
-      console.log('B - it is!');
       
       currentList = processRestaurants(arrayFromJson);
       // console.log(currentList);
