@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahsan Khalid's Lab for INST377</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <h1>Ahsan's INST377 Labs</h1>
+        </header>
+        <div class="container">
+            <div class="left_section box">
+                <h2>Form Inputs</h2>
+            <form action="/api" class="box main_form">
+            <div>
+                <label for="resto">Filter Restaurent List</label>
+                <input type="text" name="resto" id="resto"/>
+            </div>
+            <div class= "lds-ellipsis"><div></div><div></div><div></div></div>
+                <button type="submit" id="get-resto">Change Restaurents</button>
+            </div>
+            </form>
+            <div class="right_section box">
+                <h2>Local Restaurent Map</h2>
+                <div class="box" id="restaurant_list"> 
+                A list of restaurents from API
+            </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        Github Account Name <a href="https://github.com/ahsankhalid180"> ahsankhalid180</a>
+    </footer>
+    </div>
+<script src="./script.js"></script>
+</body>
+</html>
