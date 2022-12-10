@@ -108,7 +108,7 @@ async function mainEvent() {
   console.log(arrayFromJson[0]);
 
   // this is called "string interpolation" and is how we build large text blocks with variables
-  console.log(`${arrayFromJson.data[0].name} ${arrayFromJson.data[0].category}`);
+  console.log(`${arrayFromJson[0].name} ${arrayFromJson[0].category}`);
 
   // This IF statement ensures we can't do anything if we don't have information yet
   if (arrayFromJson.data?.length > 0) { // the question mark in this means "if this is set at all"
