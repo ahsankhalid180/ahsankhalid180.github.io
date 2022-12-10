@@ -91,8 +91,8 @@ async function mainEvent() {
   /////////const results = await fetch('/api/foodServicePG');
   /////////const arrayFromJson = await results.json(); // here is where we get the data from our request as JSON
 
-  // const results = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json?category=Restaurant');  
-  const results = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json?establishment_id=900');
+  const results = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json?category=Restaurant');  
+  // const results = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json?establishment_id=900');
 
   const arrayFromJson = await results.json(); 
   /*
