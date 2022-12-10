@@ -136,7 +136,7 @@ function getRandomIntInclusive(min, max) {
     console.log(`${arrayFromJson[0].name} ${arrayFromJson[0].category}`);
   
     // This IF statement ensures we can't do anything if we don't have information yet
-    if (arrayFromJson.data?.length > 0) { // the question mark in this means "if this is set at all"
+    if (arrayFromJson?.length > 0) { // the question mark in this means "if this is set at all"
       submit.style.display = 'block'; // let's turn the submit button back on by setting it to display as a block when we have data available
   
       // hide load button
@@ -159,7 +159,7 @@ function getRandomIntInclusive(min, max) {
         submitEvent.preventDefault();
   
         // This constant will have the value of your 15-restaurant collection when it processes
-        currentList = processRestaurants(arrayFromJson.data);
+        currentList = processRestaurants(arrayFromJson);
         // And this function call will perform the "side effect" of injecting the HTML list for you
         injectHTML(currentList);
         markerPlace(currentList, pageMap); 
