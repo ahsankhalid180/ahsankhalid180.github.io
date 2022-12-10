@@ -81,7 +81,7 @@ async function mainEvent() {
   const form = document.querySelector('.main_form'); // get your main form so you can do JS with it
   const submit = document.querySelector('#get-resto'); // get a reference to your submit button
   const loadAnimation = document.querySelector('.lds-ellipsis');
-  // submit.style.display = 'none'; // let your submit button disappear
+  submit.style.display = 'none'; // let your submit button disappear
 
   /*
       Let's get some data from the API - it will take a second or two to load
@@ -130,9 +130,14 @@ async function mainEvent() {
     // this is a synchronous event event, because we already did our async request above, and waited for it to resolve
     form.addEventListener('submit', (submitEvent) => {
       // This is needed to stop our page from changing to a new URL even though it heard a GET request
+      
+      console.log('A - it is!');
       submitEvent.preventDefault();
 
       // This constant will have the value of your 15-restaurant collection when it processes
+      
+      console.log('B - it is!');
+      
       currentList = processRestaurants(arrayFromJson.data);
       // console.log(currentList);
       // And this function call will perform the "side effect" of injecting the HTML list for you
