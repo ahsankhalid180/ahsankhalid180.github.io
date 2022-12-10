@@ -111,7 +111,7 @@ async function mainEvent() {
   console.log(`${arrayFromJson[0].name} ${arrayFromJson[0].category}`);
 
   // This IF statement ensures we can't do anything if we don't have information yet
-  if (arrayFromJson.data?.length > 0) { // the question mark in this means "if this is set at all"
+  if (arrayFromJson?.length > 0) { // the question mark in this means "if this is set at all"
     submit.style.display = 'block'; // let's turn the submit button back on by setting it to display as a block when we have data available
 
     // hide load button
@@ -119,8 +119,10 @@ async function mainEvent() {
     loadAnimation.classList.add('lds-ellipsis_hidden');
 
     let currentList = [];
+    console.log('D - it is!');
 
     form.addEventListener('input', (event) => {
+      console.log('C - it is!');
       console.log(event.target.value);
       const filteredList = filterList(currentList, event.target.value);
       injectHTML(filteredList);
