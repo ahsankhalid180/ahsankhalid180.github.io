@@ -140,7 +140,7 @@ async function mainEvent() {
       
       console.log('B - it is!');
       
-      currentList = processRestaurants(arrayFromJson.data);
+      currentList = processRestaurants(arrayFromJson);
       // console.log(currentList);
       // And this function call will perform the "side effect" of injecting the HTML list for you
       injectHTML(currentList);
