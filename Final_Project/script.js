@@ -72,8 +72,14 @@
     const loadAnimation = document.querySelector('.lds-ellipsis');
     submit.style.display = 'none'; 
 
-    const results = await fetch('https://api.spotify.com.');  
-    const arrayFromJson = await results.json(); 
+    // const results = await fetch('https://api.spotify.com.');  
+    // const arrayFromJson = await results.json(); 
+
+    var spotifyApi = new SpotifyWebApi({
+      clientId: '51337b9aab714a6babee103189858810',
+      clientSecret: '4c693670485946a6a982309125091dd6',
+      redirectUri: 'https://ahsankhalid180.github.io/Final_Project/'
+    });
 
     console.log('Test PG County Set')
     console.table(arrayFromJson);
@@ -114,3 +120,9 @@
 
   document.addEventListener('DOMContentLoaded', async () => mainEvent()); 
   
+
+  // var spotifyApi = new SpotifyWebApi({
+  //   clientId: 'fcecfc72172e4cd267473117a17cbd4d',
+  //   clientSecret: 'a6338157c9bb5ac9c71924cb2940e1a7',
+  //   redirectUri: 'http://www.example.com/callback'
+  // });
