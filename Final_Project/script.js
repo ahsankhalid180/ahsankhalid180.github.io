@@ -75,6 +75,7 @@
     // const results = await fetch('https://api.spotify.com.');  
     // const arrayFromJson = await results.json(); 
 
+    var SpotifyWebApi = require('spotify-web-api-node');
     var spotifyApi = new SpotifyWebApi({
       clientId: '51337b9aab714a6babee103189858810',
       clientSecret: '4c693670485946a6a982309125091dd6',
