@@ -72,7 +72,7 @@
     const loadAnimation = document.querySelector('.lds-ellipsis');
     submit.style.display = 'none'; 
 
-    const results = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json?category=Restaurant');  
+    const results = await fetch('https://api.spotify.com.');  
     const arrayFromJson = await results.json(); 
 
     console.log('Test PG County Set')
